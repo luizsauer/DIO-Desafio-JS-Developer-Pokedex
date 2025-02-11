@@ -4,14 +4,59 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background: linear-gradient(to bottom, #ffcc00, #e93c3c, #0066ff, #33cc33);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+footer {
+    margin-top: 2.5rem;
+    color: whitesmoke;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.6rem;
+    padding-top: 0.6rem;
+    display: inline-block;
+}
+
+footer img {
+    display: inline;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+    cursor: pointer;
+    height: 30px;
+}
+
+/* Estilizando o container do título */
+.title-container {
+    background-color: #ffcc00; /* Cor de fundo */
+    padding: 10px 20px; /* Espacamento interno */
+
+    border-radius: 15px; /* Borda arredondada */
+    display: flex; /* Faz o container ter apenas o tamanho do conteúdo */
+    justify-content: center;
+    text-align: center; /* Alinha o texto ao centro */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilizando o título */
+.title-container h1 {
+    margin: 0; /* Remove a margem padrão do h1 */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
 }
 
 .content {
+    height: 180vh;
     width: 100vw;
-    height: 100vh;
     padding: 1rem;
     background-color: #fff;
+
 }
 
 @media screen and (min-width: 992px) {
@@ -21,4 +66,19 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
     }
+    
+}
+@keyframes glowing {
+    0% { box-shadow: 0 0 10px #ffcc00, 0 0 20px #ff3366; }
+    50% { box-shadow: 0 0 30px #ffcc00, 0 0 60px #ff3366; }
+    100% { box-shadow: 0 0 10px #ffcc00, 0 0 20px #ff3366; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    animation: glowing 1.5s infinite alternate;
+}
+
+/* Para dar destaque ao texto */
+p, ul, li {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
